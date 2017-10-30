@@ -1,0 +1,11 @@
+{
+  "email": "peter@warren.corp.com",
+  "language": "nb-No",
+  "password": "peter123",
+  "transientPhoneNumber": {
+    "description": "Home",
+    "number": "4166709",
+    "prefix": "+47",
+    "smsCapable": true
+  }
+}
