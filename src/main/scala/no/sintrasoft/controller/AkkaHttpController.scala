@@ -14,10 +14,7 @@ import scala.concurrent.ExecutionContext
 @Singleton
 @Path("/akka-http-microservice")
 @Api(value = "/akka-http-microservice")
-//@Path("/api/v1/akka-http-microservice")
-//@Api(value = "/api/v1/akka-http-microservice" )
-class AkkaHttpController @Inject()(@Named("serviceName") serviceName: String, //implicit val db: Database,
-                                   implicit val context: ExecutionContext) extends Logger{
+class AkkaHttpController @Inject()(@Named("serviceName") serviceName: String, implicit val context: ExecutionContext) extends Logger{
 
   @Path("/welcome")
   @ApiOperation(httpMethod = "GET", response = classOf[String], value = "Returns a welcome message.")

@@ -17,10 +17,6 @@ class Bindings extends AbstractModule {
     bindNames()
     bindConfig()
     bindAkkaActorSystem()
-    //bindMetrics()
-    //bindMongo()
-    //bindSQL()
-    //bindJetpack()
   }
 
   def bindNames() = {
@@ -52,32 +48,4 @@ class Bindings extends AbstractModule {
     bind(classOf[ExecutionContext]).toInstance(actorSystem.dispatcher)
     bind(classOf[ActorMaterializer]).toInstance(ActorMaterializer())
   }
-
-  /*def bindMetrics() = {
-    //bind(classOf[MetricSetup]).toInstance(new no.sintrasoft.Metrics.SintrasoftMetricSetup)
-    bind(classOf[MetricsConfigProducer]).toInstance(new SintraSoftMetricsConfigProducer(s"service.$serviceId"))
-    bind(classOf[MetricsRegistry]).toInstance(new MetricsRegistry)
-    bind(classOf[HealthCheckRegistry]).toInstance(new HealthCheckRegistry)
-    bind(classOf[DiskSpaceHealthIndicator]).toInstance(new DiskSpaceHealthIndicator(10485760))
-  }*/
-
-  /*def bindMongo() = {
-    "MongoDB"
-  }
-
-  def bindSQL() = {
-    "SQL"
-  }*/
-
-  /*def bindControllers() = {
-    bind(classOf[JetpackInfoController])
-    bind(classOf[JetpackCanaryTestController])
-    bind(classOf[AkkaHttpController])
-  }
- */
-  /*def bindJetpack() = {
-    //val healthBinder = ScalaMultiBinder.newSetBinder[HealthIndicator](binder())
-    //healthBinder.addBinding.to[ApplicationHealthIndicator]
-    //healthBinder.addBinding.to[DiskSpaceHealthIndicator]
-  }*/
 }

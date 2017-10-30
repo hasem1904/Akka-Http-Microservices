@@ -188,7 +188,7 @@ object RequestLevelClientJsonPlaceholder extends App with JsonSerialization with
   }
 }
 
-//Linkdb
+//Domain DTO's.
 case class Users(email:String, language:String, password:String,transientPhoneNumber:TransientPhoneNumber)
 case class TransientPhoneNumber(description:String, number:String, prefix:String, smsCapable:Boolean)
 
